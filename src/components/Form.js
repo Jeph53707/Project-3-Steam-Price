@@ -10,3 +10,6 @@
 
 // Do fetch call in App.js
 // Wireframe 
+
+
+// Make an API request for testing purposes on App.js via fetch 
