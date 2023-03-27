@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.scss';
+import Form from "./components/Form.js";
+
+
+
+
+  
+  // art.map ((artPiece) => {
+  //   console.log(artPiece)
+  //   if(artPiece.principalOrFirstMaker === "André-Charles Boulle"){
+  //     console.log(artPiece)
+  // }})
+  
+    
+//
+//Form Input with select list of artists 
+//User selection in a piece of state 
+//Tie use state with involvedMaker 
+//Input at top level 
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Form />
+    </>
+  )
+
 }
+
 
 export default App;
