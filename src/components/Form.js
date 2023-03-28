@@ -29,7 +29,7 @@ const Form = (props) => {
 
     const [art, setArt] = useState ([]);
 
-    const [artOrientation, setArtOrientation] = useState (null)
+    // const [artOrientation, setArtOrientation] = useState (null)
     
     useEffect (() => {
       const apiKey = "BbPWn3yL"

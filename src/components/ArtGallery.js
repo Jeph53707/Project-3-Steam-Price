@@ -1,6 +1,5 @@
 import ArtPiece from "./ArtPiece.js"
-import Form from "./Form.js"
-import axios from "axios"
+
 
 // Within a UL element, map through props.array and return ArtPiece component 
 // 
