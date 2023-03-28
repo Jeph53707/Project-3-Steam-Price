@@ -8,17 +8,13 @@ import axios from "axios"
 const ArtGallery = (props) => {
     console.log(props.ArtArray)
    
-
-
     return (
         <>
             <h2>This is the Art Array</h2>
             <ul>
                 {
-                    props.ArtArray.map ((ArtPiece) => (
-                        
-                            <ArtPiece ArtImage = {ArtPiece}/>
-                        
+                    props.ArtArray.map ((indArt) => (
+                        <ArtPiece ArtImage = {indArt}/>
                     ))
                 }
             </ul>

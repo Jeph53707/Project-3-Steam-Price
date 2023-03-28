@@ -42,7 +42,7 @@ const Form = (props) => {
           format: "json",
           imgonly: true,
           involvedMaker: selectedValue,
-          ps: 100
+          ps: 50
          
          
         },
@@ -54,12 +54,13 @@ const Form = (props) => {
 
     return (
         <>
-            <h2> Show me photos that are: </h2>
+            <h2> Artist and Artwork! </h2>
             <select onChange = {handleChange} value = {selectedValue}>
                 <option value="placeholder" disabled>Pick One!</option>
                 <option value="Vincent van Gogh">Vincent Van Gogh</option>
-                <option value="Da Vinci">Da Vinci</option>
-                <option value="Pieter Bruegel">Pieter Bruegel</option>
+                <option value="Pablo Picasso">Pablo Picasso</option>
+                <option value="Pieter Brueghel">Pieter Brueghel</option>
+                <option value="Leonardo da Vinci">Leonardo da Vinci</option>
             </select>
             <ArtGallery ArtArray = {art} />
 
