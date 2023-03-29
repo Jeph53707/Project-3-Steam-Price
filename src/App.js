@@ -1,5 +1,5 @@
 
-import './App.scss';
+import './App.css';
 import Form from "./components/Form.js";
 
 

@@ -64,6 +64,7 @@ const Form = (props) => {
                   <option value="Pablo Picasso">Pablo Picasso</option>
                   <option value="Pieter Brueghel">Pieter Brueghel</option>
                   <option value="Leonardo da Vinci">Leonardo da Vinci</option>
+                  <option value="Henri Matisse">Henri Matisse</option>
               </select>
             </form>
             <ArtGallery ArtArray = {art} />
