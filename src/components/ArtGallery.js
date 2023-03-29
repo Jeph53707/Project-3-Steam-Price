@@ -7,6 +7,7 @@ import ArtPiece from "./ArtPiece.js"
 const ArtGallery = (props) => {
     return (
         <>
+            <h3>The Art!</h3>
             <ul>
                 {
                     props.ArtArray.map ((indArt) => (
