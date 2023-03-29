@@ -42,7 +42,7 @@ const Form = (props) => {
           format: "json",
           imgonly: true,
           involvedMaker: selectedValue,
-          ps: 50
+          ps: 6
          
          
         },
@@ -52,19 +52,23 @@ const Form = (props) => {
        
       })},[selectedValue]);
 
+    
     return (
-        <>
-            <h2> Artist and Artwork! </h2>
-            <select onChange = {handleChange} value = {selectedValue}>
-                <option value="placeholder" disabled>Pick One!</option>
-                <option value="Vincent van Gogh">Vincent Van Gogh</option>
-                <option value="Pablo Picasso">Pablo Picasso</option>
-                <option value="Pieter Brueghel">Pieter Brueghel</option>
-                <option value="Leonardo da Vinci">Leonardo da Vinci</option>
-            </select>
+        <div className="artistForm">
+            <h2> AA Finder </h2>
+            <form>
+              <label>Click to choose your artists!</label>
+              <select onChange = {handleChange} value = {selectedValue}>
+                  <option value="placeholder" disabled>Pick One!</option>
+                  <option value="Vincent van Gogh">Vincent Van Gogh</option>
+                  <option value="Pablo Picasso">Pablo Picasso</option>
+                  <option value="Pieter Brueghel">Pieter Brueghel</option>
+                  <option value="Leonardo da Vinci">Leonardo da Vinci</option>
+              </select>
+            </form>
             <ArtGallery ArtArray = {art} />
 
-        </>
+        </div>
 
     )
        
