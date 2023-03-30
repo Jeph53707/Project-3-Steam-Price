@@ -1,13 +1,6 @@
 import ArtPiece from "./ArtPiece.js"
 
-
-
-// Within a UL element, map through props.array and return ArtPiece component 
-
 const ArtGallery = (props) => {
-    console.log (props.noArt)
-
-
     return (
         <>
             <p>Disclaimer: Some of the artworks will not be available due to copyright *looking at you Picasso*</p>
@@ -20,10 +13,6 @@ const ArtGallery = (props) => {
                     ))
                 }
                 </ul>
-               
-            
-                 
-            
 
         </>   
     )
