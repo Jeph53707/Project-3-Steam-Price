@@ -16,12 +16,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 import ArtGallery from './ArtGallery.js'
 
-const Form = (props) => {
+const Form = () => {
     const [selectedValue, setSelectedValue] = useState ("placeholder");
+    const [buttonValue, setButtonValue] = useState ("placeholder")
+    const [noArt, setNoArt] = useState (false)
     const handleChange = (e) => {
-        //set the selected state 
-        // console.log ("tt")
-        console.log (e.target.value)
+  
         setSelectedValue (e.target.value)
 
 
@@ -29,8 +29,12 @@ const Form = (props) => {
 
     const [art, setArt] = useState ([]);
 
-    // const [artOrientation, setArtOrientation] = useState (null)
-    
+   
+    const onSubmit = (e) => {
+      e.preventDefault ()
+      setButtonValue (selectedValue)
+    }
+
     useEffect (() => {
       const apiKey = "BbPWn3yL"
       axios ({
@@ -41,34 +45,52 @@ const Form = (props) => {
           key: apiKey,
           format: "json",
           imgonly: true,
-          involvedMaker: selectedValue,
+          involvedMaker: buttonValue,
           ps: 6
          
          
         },
       }).then((response) => {
-        console.log(response.data.artObjects);
         setArt (response.data.artObjects)
+      
+        if (art.length === 0) { setNoArt (true) }
+        else { setNoArt (false) }
+
+        console.log (noArt)
+        }
        
-      })},[selectedValue]);
+      )},[buttonValue]);
+    
+     
+     
 
     
     return (
         <div className="artistForm">
+          <div className="formHeader">
             <h2> AA Finder </h2>
-            <form>
+            <form onSubmit = {onSubmit}>
+
               <label>Click to choose your artists!</label>
               <select onChange = {handleChange} value = {selectedValue}>
                   <option value="placeholder" disabled>Pick One!</option>
-                  <option value="Vincent van Gogh">Vincent Van Gogh</option>
+                  <option value="Vincent van Gogh">Vincent van Gogh</option>
                   <option value="Pablo Picasso">Pablo Picasso</option>
                   <option value="Pieter Brueghel">Pieter Brueghel</option>
                   <option value="Leonardo da Vinci">Leonardo da Vinci</option>
                   <option value="Henri Matisse">Henri Matisse</option>
+                  <option value="Diego Rivera">Diego Rivera</option>
+                  <option value="Edgar Degas">Edgar Degas</option>
+                  <option value="Paul Cézanne">Paul Cézanne</option>
+                  <option value="Paul Gauguin">Paul Gauguin</option>
+                  <option value="Jeff Chen">Jeff Chen</option>
               </select>
+              <button type="submit">Get Art</button>
             </form>
-            <ArtGallery ArtArray = {art} />
-
+          </div>
+            <ArtGallery ArtArray = {art} 
+            noArt = {noArt} />
+     
         </div>
 
     )

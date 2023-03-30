@@ -2,12 +2,15 @@ const ArtPiece = (props) => {
     return (
         
         <>
-            <li className="artPieceContainer" key={props.ArtImage.id}>{props.ArtImage.title}</li>
-            <img src={props.ArtImage.webImage.url} alt={props.ArtImage.title}/>
+            <li key={props.ArtImage.id} className="artPieceContainer">
+                <p>{props.ArtImage.title}</p>
+                <img src={props.ArtImage.webImage.url} alt={props.ArtImage.title} />
+            </li>
+
         </>
     )
 }
 
-//ArtImage.webImage.url is the img src 
+
 
 export default ArtPiece;
