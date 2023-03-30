@@ -69,8 +69,7 @@ const Form = () => {
               <button type="submit">Get Art</button>
             </form>
           </div>
-            <ArtGallery ArtArray = {art} 
-            noArt = {noArt} />
+            <ArtGallery ArtArray = {art} />
      
         </div>
 
