@@ -22,6 +22,7 @@ html {
 
 body {
   background: url(./assets/PaintingBeigeBackground.jpg);
+  background-position: center;
   max-width: 100%;
   text-align: center;
   background-color: #c9c0b7;
