@@ -1,17 +1,3 @@
-// Two Network requests
-// 1 request to get all games list | 1 map request to get detailed information if the first was successful 
-
-
-// Form that would take in user input which would then fetch the API to send us a list of all games 
-// This list of games is then placed in the Form drop down menu 
-// If the user clicks on one of the items they are given additional information
-// useEffect call to get the list of AppIDs from the API -> the list is passed down to form which will take care of   rendering each game and related information 
-// Product Info and Game Info
-// Wireframe 
-
-
-// Make an API request for testing purposes on App.js via fetch 
-
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import ArtGallery from './ArtGallery.js'
@@ -19,7 +5,6 @@ import ArtGallery from './ArtGallery.js'
 const Form = () => {
     const [selectedValue, setSelectedValue] = useState ("placeholder");
     const [buttonValue, setButtonValue] = useState ("placeholder")
-    const [noArt, setNoArt] = useState (false)
     const handleChange = (e) => {
   
         setSelectedValue (e.target.value)
@@ -53,14 +38,9 @@ const Form = () => {
       }).then((response) => {
         setArt (response.data.artObjects)
       
-        //Disabled for now due to errors 
-        // if (art.length === 0) { setNoArt (true) }
-        // else { setNoArt (false) }
-
-        console.log (noArt)
         }
        
-      )},[buttonValue])
+      )},[buttonValue]);
     
      
      
