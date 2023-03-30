@@ -59,7 +59,7 @@ const Form = () => {
         console.log (noArt)
         }
        
-      )},[buttonValue]);
+      )},[buttonValue, noArt, art.length])
     
      
      
