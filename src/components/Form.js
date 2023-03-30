@@ -50,7 +50,7 @@ const Form = () => {
         <div className="artistForm">
           <div className="formHeader">
             <h2> AA Finder </h2>
-            <form onSubmit = {onSubmit}>
+            <form class="formBar" onSubmit = {onSubmit}>
 
               <label>Click to choose your artists!</label>
               <select onChange = {handleChange} value = {selectedValue}>
