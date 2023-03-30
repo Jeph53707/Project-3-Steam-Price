@@ -53,13 +53,13 @@ const Form = () => {
       }).then((response) => {
         setArt (response.data.artObjects)
       
-        if (art.length === 0) { setNoArt (true) }
-        else { setNoArt (false) }
+        // if (art.length === 0) { setNoArt (true) }
+        // else { setNoArt (false) }
 
-        console.log (noArt)
+        // console.log (noArt)
         }
        
-      )},[buttonValue, noArt, art.length])
+      )},[buttonValue]);
     
      
      
