@@ -21,6 +21,7 @@ html {
 }/*# sourceMappingURL=index.css.map */
 
 body {
+  background: url(./assets/PaintingBeigeBackground.jpg);
   max-width: 100%;
   text-align: center;
   background-color: #c9c0b7;
